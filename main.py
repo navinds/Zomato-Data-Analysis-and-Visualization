@@ -12,7 +12,7 @@ from itertools import combinations
 from streamlit_lottie import st_lottie
 import requests
 
-df = pd.read_csv(r"D:\DATA SCIENCE ZONE\Projects\guvi_final_project\Zomato-Data-Analysis-and-Visualization\datasets\cleaned_final_df.csv")
+df = pd.read_csv(r"https://raw.githubusercontent.com/navinds/Zomato-Data-Analysis-and-Visualization/main/datasets/cleaned_final_df.csv")
 # Get the list of unique cuisines from your DataFrame
 
 # Set page title and favicon

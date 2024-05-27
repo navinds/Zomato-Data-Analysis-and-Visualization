@@ -60,7 +60,7 @@ if selected == "HOME":
             
         st.markdown("")
         st.markdown("")
-        st.markdown("<h1 style='color:#EF4F5F; display: inline;'>Welcome to Fine Dine</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='color:#EF4F5F; display: inline;'> Welcome to Fine Dine</h1>", unsafe_allow_html=True)
         st.markdown("<h1 style='color:black; display: inline;'>Unveiling India's Food Landscape: Insights from Zomato</h1>", unsafe_allow_html=True)
         home_col1,home_col2 = st.columns(2)
         with home_col1:

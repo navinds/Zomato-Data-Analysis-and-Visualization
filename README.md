@@ -1,6 +1,7 @@
 # Fine Dine Project
 
 Welcome to the Fine Dine project! This project leverages web scraping and data analysis techniques to provide insightful analysis of restaurant data across India, using data sourced from Zomato. This README file will guide you through the project's objectives, setup instructions, features, and more.
+![image](https://github.com/navinds/Zomato-Data-Analysis-and-Visualization/assets/155221787/979dcafa-2b3f-4bd6-b172-b20f2994a19c)
 
 ## Table of Contents
 - [Project Objectives](#project-objectives)

@@ -23,7 +23,7 @@ violet_color = "#6F36AD"
 st.markdown("<div style='text-align:center'><img src='https://raw.githubusercontent.com/navinds/Zomato-Data-Analysis-and-Visualization/main/Media/finedine_logo.png' style='width: 500px;'/></div>", unsafe_allow_html=True)
 
 selected = option_menu("",
-                       options=["ABOUT", "HOME", "INSIGHTS","REPORT"],
+                       options=["ABOUT", "HOME", "INSIGHTS"],
                        icons=["info-circle", "house", "bar-chart", "file-text"],
                        default_index=1,
                        orientation="horizontal",
@@ -60,15 +60,39 @@ if selected == "HOME":
             
         st.markdown("")
         st.markdown("")
+        st.markdown("<h1 style='color:#EF4F5F; display: inline;'>Welcome to Fine Dine</h1>", unsafe_allow_html=True)
         st.markdown("<h1 style='color:black; display: inline;'>Unveiling India's Food Landscape: Insights from Zomato</h1>", unsafe_allow_html=True)
-        st.markdown("<h1 style='color:#EF4F5F; display: inline;'>Fine Dine</h1>", unsafe_allow_html=True)
-        st.markdown("<h2 style='color:#EF4F5F'>What is Fine Dine?</h2>", unsafe_allow_html=True)
-        st.write(" Fine Dine is an app designed to help people explore and understand the diverse world of Indian cuisine. Using data from Zomato, it offers insights into various aspects of dining experiences, both at the city level and across the entire country. Fine Dine aims to make dining experiences more enjoyable and memorable by providing valuable information and insights to its users.")
-        st.markdown("<h1 style='color:#EF4F5F; display: inline;'>Discover by City or Nation</h1>", unsafe_allow_html=True)
-        st.subheader("City Exploration:")
-        st.write("Dive into the tastes of India's cities.")
-        st.subheader("Nationwide Insights:")
-        st.write("Get a taste of the entire country.")
+        home_col1,home_col2 = st.columns(2)
+        with home_col1:
+            
+            st.title("")
+            st.title("")
+            st.markdown("<h2 style='color:#EF4F5F'>What is Fine Dine?</h2>", unsafe_allow_html=True)
+            st.write(" Fine Dine is an app designed to help people explore and understand the diverse world of Indian cuisine. Using data from Zomato, it offers insights into various aspects of dining experiences, both at the city level and across the entire country. Fine Dine aims to make dining experiences more enjoyable and memorable by providing valuable information and insights to its users.")
+
+
+        with home_col2:
+            home_lottie_url = "https://lottie.host/26208437-09a6-44d5-b727-71b7fa0bb840/ZfL194fvPv.json"  # Replace with your Lottie file URL
+                # Load the Lottie animation
+            home_lottie_animation = load_lottie_url(home_lottie_url)
+            st_lottie(home_lottie_animation, width=500, height=500,quality= 'high')            
+        
+        home_col3,home_col4 = st.columns(2)
+        with home_col3:
+            explore_url = "https://lottie.host/e0b8a386-c9ea-4042-a9b8-ed63bec5f371/TF196S2MpR.json"  # Replace with your Lottie file URL
+
+                # Load the Lottie animation
+            explore_lottie_animation = load_lottie_url(explore_url)
+            st_lottie(explore_lottie_animation, width=500, height=500,quality= 'high')            
+        with home_col4:            
+            st.title("")
+            st.title("")
+            st.title("")
+            st.markdown("<h1 style='color:#EF4F5F; display: inline;'>Discover by City or Nation</h1>", unsafe_allow_html=True)
+            st.subheader("City Exploration:")
+            st.write("Dive into the tastes of India's cities.")
+            st.subheader("Nationwide Insights:")
+            st.write("Get a taste of the entire country.")
         html1_string = """
         <style>
         .gif-container {
@@ -86,29 +110,48 @@ if selected == "HOME":
         <img src="https://raw.githubusercontent.com/navinds/Zomato-Data-Analysis-and-Visualization/main/Media/top_options.gif" alt="Alt Text">
         </div>
         """
-        st.markdown(html1_string, unsafe_allow_html=True)              
-        st.markdown("<h2 style='color:#EF4F5F; display: inline;'>City Insights:</h2>", unsafe_allow_html=True)
-        st.markdown("""
-        - **Explore Cuisines:** Sample a variety of flavors without any specific cravings.
-        - **Find Specific Cuisines:** Instantly locate and explore your favorite dishes.
-        - **Cuisine Analysis:** Use filters to find the best cuisines based on popularity and value.
-        - **Locality Ratings:** Discover top-rated dining spots in each city's neighborhoods.
-        - **Cost vs Ratings:** See how restaurant ratings relate to different price ranges.
-        """)
+        st.markdown(html1_string, unsafe_allow_html=True)    
+        home_col5,home_col6 = st.columns(2)          
+        with home_col5:
+            st.title("")
+            st.title("")
+            st.markdown("<h2 style='color:#EF4F5F; display: inline;'>City Insights:</h2>", unsafe_allow_html=True)
+            st.markdown("""
+            - **Explore Cuisines:** Sample a variety of flavors without any specific cravings.
+            - **Find Specific Cuisines:** Instantly locate and explore your favorite dishes.
+            - **Cuisine Analysis:** Use filters to find the best cuisines based on popularity and value.
+            - **Locality Ratings:** Discover top-rated dining spots in each city's neighborhoods.
+            - **Cost vs Ratings:** See how restaurant ratings relate to different price ranges.
+            """)
+        
+        with home_col6:
+            city_explore_url = "https://lottie.host/12391662-2feb-4549-a4fa-825dcf427db8/VIGSC0W9wD.json"  # Replace with your Lottie file URL
+
+                # Load the Lottie animation
+            city_explore_animation = load_lottie_url(city_explore_url)
+            st_lottie(city_explore_animation, width=400, height=400,quality= 'high')
 
         # Nationwide Highlights
-        st.markdown("<h2 style='color:#EF4F5F; display: inline;'>Nationwide Highlights:</h2>", unsafe_allow_html=True)
-        st.markdown("""
-        - **Top Restaurants:** Uncover India's highest-rated dining destinations.
-        - **Popular Cuisines:** Explore beloved dishes from across the nation.
-        - **Search for Cuisines:** Find and learn about any cuisine with ease.
-        - **Cuisine Filters:** Customize your cuisine preferences based on ratings and costs.
-        - **Cost vs Ratings:** Make informed decisions by understanding how ratings vary with prices.
-        - **Popular Pairings:** Discover favorite cuisine combinations loved by food enthusiasts everywhere.
-        """)
+        home_col7,home_col8 = st.columns(2)   
+        with home_col7:
+            nation_explore_url = "https://lottie.host/8087f44a-3ade-4095-9455-4733a6ef1a3c/kYmsjGaWrK.json"  # Replace with your Lottie file URL
+
+                # Load the Lottie animation
+            nation_explore_ani = load_lottie_url(nation_explore_url)
+            st_lottie(nation_explore_ani, width=600, height=300,quality= 'high')
+        with home_col8:
+            st.markdown("<h2 style='color:#EF4F5F; display: inline;'>Nationwide Highlights:</h2>", unsafe_allow_html=True)
+            st.markdown("""
+            - **Top Restaurants:** Uncover India's highest-rated dining destinations.
+            - **Popular Cuisines:** Explore beloved dishes from across the nation.
+            - **Search for Cuisines:** Find and learn about any cuisine with ease.
+            - **Cuisine Filters:** Customize your cuisine preferences based on ratings and costs.
+            - **Cost vs Ratings:** Make informed decisions by understanding how ratings vary with prices.
+            - **Popular Pairings:** Discover favorite cuisine combinations loved by food enthusiasts everywhere.
+            """)
 
         
-        st.markdown("<h2 style='color:#EF4F5F; display: inline;'>How This App Will Be Helpful:</h2>", unsafe_allow_html=True) 
+        st.markdown("<h2 style='color:#EF4F5F; display: inline;'>🧠 How This App Will Be Helpful:</h2>", unsafe_allow_html=True) 
         html_string = """
         <style>
         .gif-container {
@@ -172,7 +215,93 @@ if selected == "HOME":
 
     home_page()               
 
+if selected == "ABOUT" :
+    def about_page():
+        # Title
+        st.title("About the Fine Dine Project")
 
+        # Introduction
+        st.write("""
+        Welcome to the **Fine Dine Project**. This project is designed to provide insightful analysis of restaurant data across India, leveraging data scraped from the Zomato website. Whether you are a food enthusiast, a data science professional, or someone interested in dining trends, this app offers valuable insights for everyone.
+        """)
+
+        # Project Objectives
+        st.markdown("<h2 style='color:#EF4F5F; display: inline;'>Project Objectives:</h2>", unsafe_allow_html=True)    
+        st.write("""
+        The Fine Dine project aims to achieve the following objectives:
+        1. **Comprehensive Data Analysis**: To perform an extensive analysis of restaurant data, encompassing various metrics such as cuisines, ratings, costs,and locations at both city and national levels.
+        2. **Enhanced Decision-Making**: To provide users with actionable insights that can help them make informed dining decisions based on their preferences and budget.
+        3. **User-Friendly Experience**: To create an intuitive and interactive platform using Streamlit that allows users to explore restaurant data effortlessly.
+        4. **Identifying Trends**: To uncover dining trends and patterns across different cities and nationwide, highlighting popular cuisines, cost-effective dining options, and high-rated localities.
+        5. **Promoting Data Literacy**: To demonstrate the power of data science and web scraping in extracting and analyzing real-world data, encouraging users to explore these techniques.
+        6. **Culinary Exploration**: To assist users in discovering new and diverse culinary experiences by providing detailed information on various cuisines and their popularity.
+        """)
+
+        # Data Collection
+        st.markdown("<h2 style='color:#EF4F5F; display: inline;'>Data Collection:</h2>", unsafe_allow_html=True)    
+        st.write("""
+        The data for this project was collected from the Zomato website using advanced web scraping techniques. The tools and technologies used include:
+        - **Selenium:** Used for automated browsing and interaction with the Zomato website.
+        - **BeautifulSoup:** Employed for parsing HTML content and extracting relevant data.
+
+        The scraped data encompasses a wide range of information, including restaurant names, locations, cuisines, ratings, and costs.
+        """)
+
+
+        # Features of the App
+        st.markdown("<h2 style='color:#EF4F5F; display: inline;'>Features of the App:</h2>", unsafe_allow_html=True)    
+        st.write("""
+        The Fine Dine app offers a variety of features, categorized into City-Wise Analysis and Total India Analysis:
+
+        **City-Wise Analysis**:
+        - Explore and search for specific cuisines.
+        - Analyze cuisines with multiple filters.
+        - Discover top-rated localities.
+        - Understand the relationship between cost and ratings.
+
+        **Total India Analysis**:
+        - Find top restaurants across India.
+        - Discover popular cuisines nationwide.
+        - Use filters to analyze cuisines by ratings and costs.
+        - Explore popular cuisine combinations.
+        """)
+        # Technologies Used
+        st.markdown("<h2 style='color:#EF4F5F; display: inline;'>Technologies Used:</h2>", unsafe_allow_html=True)    
+        st.write("""
+        The Fine Dine project was developed using the following technologies:
+        - **Python:** The primary programming language used for data scraping, analysis, and app development.
+        - **Selenium:** For web scraping and automated browsing.
+        - **BeautifulSoup:** For parsing HTML and extracting data.
+        - **Pandas:** For data manipulation and analysis.
+        - **Streamlit:** For creating an interactive web application.
+
+        These technologies provide a robust platform for collecting, analyzing, and visualizing restaurant data.
+        """)
+        st.markdown("<h2 style='color:#EF4F5F; display: inline;'>About Me:</h2>", unsafe_allow_html=True)    
+        st.markdown("""
+            Hi, I'm Navin, deeply passionate about the sea of data science and AI. 
+            My goal is to become a skilled data scientist.
+
+            Beyond the lines of code, my aim is to innovate and be a part of transformative technological evolution. 
+            The world needs solutions that not only solve problems but redefine them. 
+            I'm here to create change.
+        """)
+
+        # LinkedIn link with logo
+        st.markdown("<h2 style='color:#EF4F5F; display: inline;'>Connect with Me:</h2>", unsafe_allow_html=True)    
+        col1, col2 = st.columns([1,20])
+           
+        with col1:  
+            
+            linkedin_logo = "https://img.icons8.com/fluent/48/000000/linkedin.png"  
+            linkedin_url = "https://www.linkedin.com/in/navinkumarsofficial/"  
+            st.markdown(f"[![LinkedIn]({linkedin_logo})]({linkedin_url})")
+        with col2:
+            # Email with logo
+            email_logo = "https://img.icons8.com/fluent/48/000000/email.png"  
+            your_email = "https://mail.google.com/mail/?view=cm&source=mailto&to=navinofficial1@gmail.com"
+            st.markdown(f"[![Email]({email_logo})]({your_email})")
+    about_page()
 
 if selected == "INSIGHTS" :
     filter_container1 =  st.container(border = True) 

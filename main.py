@@ -152,7 +152,7 @@ if selected == "HOME":
             """)
 
         
-        st.markdown("<h2 style='color:#EF4F5F; display: inline;'>🧠 How This App Will Be Helpful:</h2>", unsafe_allow_html=True) 
+        st.markdown("<h2 style='color:#EF4F5F; display: inline;'>How This App Will Be Helpful:</h2>", unsafe_allow_html=True) 
         html_string = """
         <style>
         .gif-container {

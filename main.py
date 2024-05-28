@@ -50,6 +50,7 @@ st.markdown("""
         """, unsafe_allow_html=True)
 if selected == "HOME":
     
+    @st.cache_data 
     def home_page():
  
         st.markdown("""
@@ -75,7 +76,7 @@ if selected == "HOME":
             home_lottie_url = "https://lottie.host/26208437-09a6-44d5-b727-71b7fa0bb840/ZfL194fvPv.json"  # Replace with your Lottie file URL
                 # Load the Lottie animation
             home_lottie_animation = load_lottie_url(home_lottie_url)
-            st_lottie(home_lottie_animation, width=500, height=500,quality= 'high')            
+            st_lottie(home_lottie_animation, width=500, height=500,quality= 'medium')            
         
         home_col3,home_col4 = st.columns(2)
         with home_col3:
@@ -83,7 +84,7 @@ if selected == "HOME":
 
                 # Load the Lottie animation
             explore_lottie_animation = load_lottie_url(explore_url)
-            st_lottie(explore_lottie_animation, width=500, height=500,quality= 'high')            
+            st_lottie(explore_lottie_animation, width=500, height=500,quality= 'medium')            
         with home_col4:            
             st.title("")
             st.title("")
@@ -129,7 +130,7 @@ if selected == "HOME":
 
                 # Load the Lottie animation
             city_explore_animation = load_lottie_url(city_explore_url)
-            st_lottie(city_explore_animation, width=400, height=400,quality= 'high')
+            st_lottie(city_explore_animation, width=400, height=400,quality= 'medium')
 
         # Nationwide Highlights
         home_col7,home_col8 = st.columns(2)   
@@ -138,7 +139,7 @@ if selected == "HOME":
 
                 # Load the Lottie animation
             nation_explore_ani = load_lottie_url(nation_explore_url)
-            st_lottie(nation_explore_ani, width=600, height=300,quality= 'high')
+            st_lottie(nation_explore_ani, width=600, height=300,quality= 'medium')
         with home_col8:
             st.markdown("<h2 style='color:#EF4F5F; display: inline;'>Nationwide Highlights:</h2>", unsafe_allow_html=True)
             st.markdown("""
@@ -207,7 +208,7 @@ if selected == "HOME":
 
             # Load the Lottie animation
         lottie_animation = load_lottie_url(food_order_lottie_url)
-        st_lottie(lottie_animation, width=250, height=250,quality= 'high')
+        st_lottie(lottie_animation, width=250, height=250,quality= 'medium')
         col1, col2 = st.columns([0.08,1.5])
         with col2:
             st.link_button("Order Now","https://www.zomato.com/")
@@ -216,6 +217,7 @@ if selected == "HOME":
     home_page()               
 
 if selected == "ABOUT" :
+    @st.cache_data 
     def about_page():
         # Title
         st.title("About the Fine Dine Project")
@@ -309,8 +311,6 @@ if selected == "INSIGHTS" :
 
     if type_selection == "**City-Wise**":
 
-
-
         city_wise_type_selection = filter_container1.radio('City-Wise Category Selection',["**Explore All Cuisines**","**Search for Specific Cuisine**","**Cuisine Analyzer**","**Compare Cuisines**","**Locality Analyzer**","**Cost Vs Ratings**"],index = None)
         with filter_container1.popover("Confused! Click Me"):
             st.write(f"<span style='color:#ef4f5f'>Explore All Cuisines =></span> This option allows you to explore a wide variety of cuisines without any specific preferences in mind.", unsafe_allow_html=True)
@@ -329,7 +329,7 @@ if selected == "INSIGHTS" :
             # Create three columns
             col1, col2, col3 = st.columns([1,0.75, 1])
             with col2:
-                st_lottie(lottie_animation, width=250, height=250,quality= 'high')
+                st_lottie(lottie_animation, width=250, height=250,quality= 'medium')
 
         if city_wise_type_selection == "**Explore All Cuisines**":
             # html_string = """
@@ -360,8 +360,9 @@ if selected == "INSIGHTS" :
             # Create three columns
             col1, col2, col3 = st.columns([1,0.75, 1])
             with col2:
-                st_lottie(lottie_animation, width=250, height=250,quality= 'high')           
-
+                st_lottie(lottie_animation, width=250, height=250,quality= 'medium')           
+            
+            
             def ins_tab1_fn():
 
                 def top_query(selected_city,price,dine_rating):
@@ -534,7 +535,7 @@ if selected == "INSIGHTS" :
             # Create three columns
             col1, col2, col3 = st.columns([1,0.75, 1])
             with col2:
-                st_lottie(lottie_animation, width=300, height=300,quality= 'high')
+                st_lottie(lottie_animation, width=300, height=300,quality= 'medium')
 
             def ins_tab2_fn():
                 unique_cuisines = df['Cuisines'].str.split(', ').explode().unique()
@@ -726,7 +727,7 @@ if selected == "INSIGHTS" :
 
             # Display the Lottie animation in the center column
             with col2:
-                st_lottie(lottie_animation, width=300, height=300,quality= 'high')
+                st_lottie(lottie_animation, width=300, height=300,quality= 'medium')
 
             def ins_tab3_fn():
                 filter_container3 =  st.container(border = True) 
@@ -945,7 +946,7 @@ if selected == "INSIGHTS" :
 
             # Display the Lottie animation in the center column
             with col2:
-                st_lottie(lottie_animation, width=250, height=250,quality= 'high')   
+                st_lottie(lottie_animation, width=250, height=250,quality= 'medium')   
             def locality_analyzer(selected_city):
             # Load the data
                 locality_data = df
@@ -1043,7 +1044,7 @@ if selected == "INSIGHTS" :
 
             # Display the Lottie animation in the center column
             with col2:
-                st_lottie(lottie_animation, width=250, height=250,quality= 'high')        
+                st_lottie(lottie_animation, width=250, height=250,quality= 'medium')        
 
 
             def costvsratings(selected_city):
@@ -1122,7 +1123,7 @@ if selected == "INSIGHTS" :
 
             # Display the Lottie animation in the center column
             with col2:
-                st_lottie(lottie_animation, width=250, height=250,quality= 'high')   
+                st_lottie(lottie_animation, width=250, height=250,quality= 'medium')   
                 
         if ind_queries:
             if ind_queries == "Popular Cuisines in India":

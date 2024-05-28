@@ -186,19 +186,17 @@ if selected == "HOME":
 
         7. **User-Friendly Interface:** The app's intuitive and easy-to-use interface makes it accessible to users of all tech proficiency levels, ensuring a smooth and enjoyable experience while navigating through the data.
 
-        8. **Real-Time Data Updates:** The app can be configured to provide real-time data updates, ensuring users have access to the most current information about restaurants and dining trends.
+        8. **Customizable Analysis:** Users can customize their analysis by applying various filters and criteria to focus on specific aspects of the data that matter most to them, such as price ranges, rating thresholds, and cuisine types.
 
-        9. **Customizable Analysis:** Users can customize their analysis by applying various filters and criteria to focus on specific aspects of the data that matter most to them, such as price ranges, rating thresholds, and cuisine types.
+        9. **Enhanced Decision-Making:** By providing a wealth of data-driven insights, the app helps users make well-informed dining decisions, whether they are looking for budget-friendly options, highly rated spots, or specific cuisine types.
 
-        10. **Enhanced Decision-Making:** By providing a wealth of data-driven insights, the app helps users make well-informed dining decisions, whether they are looking for budget-friendly options, highly rated spots, or specific cuisine types.
+        10. **Supports Local Businesses:** By highlighting top-rated and popular local restaurants, the app supports local businesses and helps users discover hidden culinary gems in their area.
 
-        11. **Supports Local Businesses:** By highlighting top-rated and popular local restaurants, the app supports local businesses and helps users discover hidden culinary gems in their area.
+        11. **Travel Planning:** For travelers, the app provides valuable information about dining options in different cities, helping them plan their culinary adventures more effectively and enjoy the best food experiences during their trips.
 
-        12. **Travel Planning:** For travelers, the app provides valuable information about dining options in different cities, helping them plan their culinary adventures more effectively and enjoy the best food experiences during their trips.
+        12. **Data-Driven Insights for Restaurant Owners:** Restaurant owners can use the app to gain insights into competitor performance, customer preferences, and emerging dining trends, helping them improve their offerings and strategies.
 
-        13. **Data-Driven Insights for Restaurant Owners:** Restaurant owners can use the app to gain insights into competitor performance, customer preferences, and emerging dining trends, helping them improve their offerings and strategies.
-
-        14. **Health-Conscious Dining:** Users can filter and find restaurants offering healthy dining options, catering to those who are mindful of their diet and nutritional intake.
+        13. **Health-Conscious Dining:** Users can filter and find restaurants offering healthy dining options, catering to those who are mindful of their diet and nutritional intake.
 
         """)
         # Food order

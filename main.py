@@ -135,7 +135,7 @@ if selected == "HOME":
         # Nationwide Highlights
         home_col7,home_col8 = st.columns(2)   
         with home_col7:
-            nation_explore_url = "https://lottie.host/8087f44a-3ade-4095-9455-4733a6ef1a3c/kYmsjGaWrK.json"  # Replace with your Lottie file URL
+            nation_explore_url = "https://lottie.host/8087f44a-3ade-4095-9455-4733a6ef1a3c/kYmsjGaWrK.json" 
 
                 # Load the Lottie animation
             nation_explore_ani = load_lottie_url(nation_explore_url)
@@ -319,7 +319,7 @@ if selected == "INSIGHTS" :
         st.write("You selected:", f"<span style='color:#ef4f5f'>{type_selection} => {city_wise_type_selection}</span>", unsafe_allow_html=True)
         if not city_wise_type_selection:
             # URL of the Lottie animation
-            lottie_url = "https://lottie.host/12391662-2feb-4549-a4fa-825dcf427db8/VIGSC0W9wD.json"  # Replace with your Lottie file URL
+            lottie_url = "https://lottie.host/12391662-2feb-4549-a4fa-825dcf427db8/VIGSC0W9wD.json"  
 
             # Load the Lottie animation
             lottie_animation = load_lottie_url(lottie_url)
@@ -350,7 +350,7 @@ if selected == "INSIGHTS" :
 
             # st.markdown(html_string, unsafe_allow_html=True)  
              # URL of the Lottie animation
-            lottie_url = "https://lottie.host/725d461a-b729-435e-aa8f-895cac6c660b/JZf13khNON.json"  # Replace with your Lottie file URL
+            lottie_url = "https://lottie.host/725d461a-b729-435e-aa8f-895cac6c660b/JZf13khNON.json" 
 
             # Load the Lottie animation
             lottie_animation = load_lottie_url(lottie_url)
@@ -934,7 +934,7 @@ if selected == "INSIGHTS" :
             city__wise_compare_cuisines()
 
         if city_wise_type_selection == "**Locality Analyzer**":
-            lottie_url = "https://lottie.host/ab875427-6843-4496-8275-c8584ab034a2/ytDvG4prHv.json"  # Replace with your Lottie file URL
+            lottie_url = "https://lottie.host/ab875427-6843-4496-8275-c8584ab034a2/ytDvG4prHv.json" 
 
             # Load the Lottie animation
             lottie_animation = load_lottie_url(lottie_url)
@@ -1032,7 +1032,7 @@ if selected == "INSIGHTS" :
 
         if city_wise_type_selection == "**Cost Vs Ratings**":
                # URL of the Lottie animation
-            lottie_url = "https://lottie.host/153745bd-a08a-488f-9b7c-879b3a19f588/PNAnD5X7UY.json"  # Replace with your Lottie file URL
+            lottie_url = "https://lottie.host/153745bd-a08a-488f-9b7c-879b3a19f588/PNAnD5X7UY.json" 
 
             # Load the Lottie animation
             lottie_animation = load_lottie_url(lottie_url)
@@ -1111,7 +1111,7 @@ if selected == "INSIGHTS" :
         st.write("You selected:", f"<span style='color:#ef4f5f'>{type_selection} => {ind_queries}</span>", unsafe_allow_html=True)
 
         if not ind_queries:
-            lottie_url = "https://lottie.host/da5a20ed-6956-4ce4-81db-30973918d48f/U5TStChgbw.json"  # Replace with your Lottie file URL
+            lottie_url = "https://lottie.host/da5a20ed-6956-4ce4-81db-30973918d48f/U5TStChgbw.json"  
 
             # Load the Lottie animation
             lottie_animation = load_lottie_url(lottie_url)

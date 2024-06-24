@@ -23,7 +23,7 @@ violet_color = "#6F36AD"
 st.markdown("<div style='text-align:center'><img src='https://raw.githubusercontent.com/navinds/Zomato-Data-Analysis-and-Visualization/main/Media/finedine_logo.png' style='width: 500px;'/></div>", unsafe_allow_html=True)
 
 selected = option_menu("",
-                       options=["ABOUT", "HOME", "INSIGHTS"],
+                       options=["HOME", "INSIGHTS","REPORT","ABOUT"],
                        icons=["info-circle", "house", "bar-chart", "file-text"],
                        default_index=1,
                        orientation="horizontal",
@@ -1140,7 +1140,45 @@ if selected == "INSIGHTS" :
                         c_analyzer_df_1_fig.update_traces(textposition='outside', textinfo='percent+label', pull=[0.05, 0.05, 0.05])
                         c_analyzer_df_1_fig.update_layout(showlegend=False, width=750, height=550)
                         c_analyzer_df_1_fig.update_traces(marker=dict(line=dict(color='#000000', width=0.25))) 
+                        with st.expander("Detailed Explanation of Popular Cuisines in India"):
+                            st.markdown("""
+                            **Description**:
+                            This insight reveals the distribution of popular cuisines among Zomato restaurants in India. The data indicates the percentage of restaurants offering each type of cuisine, highlighting the culinary preferences of the Indian population.
+
+                            **Interpretation**:
+                            1. **Dominance of North Indian Cuisine**:
+                            - North Indian cuisine is the most popular, accounting for 19% of the restaurants. This indicates a strong preference for traditional North Indian dishes among the population.
+
+                            2. **Popularity of Chinese Cuisine**:
+                            - Chinese cuisine is the second most popular, with 16% of the restaurants offering it. This reflects a significant influence of Chinese food culture in India.
+
+                            3. **Demand for Beverages**:
+                            - Beverages represent 15% of the total, suggesting a high demand for drink options, including coffee, tea, and juices.
+
+                            4. **Fast Food and Desserts**:
+                            - Fast food (12%) and desserts (11%) are also quite popular, indicating a trend towards quick, convenient meals and a preference for sweet treats.
+
+                            5. **Specialized Cuisines**:
+                            - Biryani (7%) and Pizza (6%) are notable for their specialized appeal, showcasing specific dishes that have a dedicated following.
+
+                            6. **Lesser-Known Cuisines**:
+                            - Continental (6%), South Indian (5%), and Italian (4%) cuisines have a smaller presence. This suggests a niche but stable demand for these types of food.
+
+                            **Implications**:
+                            - **Business Strategy**: Restaurants can use this information to tailor their menus to include popular cuisines to attract more customers.
+                            - **Market Entry**: New entrants in the food industry can focus on high-demand cuisines like North Indian and Chinese to quickly gain market share.
+                            - **Culinary Trends**: The data highlights ongoing culinary trends, such as the growing popularity of fast food and beverages.
+
+                            **Conclusion**:
+                            The analysis of popular cuisines in India provides valuable insights into consumer preferences. North Indian and Chinese cuisines dominate the market, while there is also substantial demand for beverages, fast food, and desserts. Understanding these trends can help stakeholders make informed decisions about menu offerings, marketing strategies, and business expansion.
+
+                            **Recommendations**:
+                            - **Menu Optimization**: Restaurants should consider featuring popular cuisines prominently on their menus.
+                            - **Promotional Campaigns**: Targeted promotions for high-demand cuisines can attract more customers.
+                            - **Diversification**: Offering a mix of popular and niche cuisines can cater to a broader audience and enhance customer satisfaction.
+                            """)                        
                         st.plotly_chart(c_analyzer_df_1_fig, use_container_width=True) 
+
                         
                     with tab2:
                         st.header(':red[Data] :open_file_folder:')
@@ -1571,7 +1609,7 @@ if selected == "INSIGHTS" :
                     ratings_by_cost_melted = pd.melt(ratings_by_cost, id_vars=['Cost_Category'], var_name='Rating Type', value_name='Average Rating')
                     ratings_by_cost_melted['Average Rating'] = ratings_by_cost_melted['Average Rating'].round(2)
 
-                    with st.expander("See Explanation"):
+                    with st.expander("Why Delivery Rating is falling contionusly?"):
                         st.markdown("<p style='color:red'>The reason why delivery ratings decrease after the moderate price categories is because many expensive and luxurious restaurants don't provide online delivery services.</p>", unsafe_allow_html=True)
 
                         delivery_counts = city_data.groupby('Cost_Category')['Has_Online_Delivery'].value_counts(normalize=True).unstack().fillna(0)
@@ -1594,6 +1632,37 @@ if selected == "INSIGHTS" :
                                 category_orders={'Cost_Category': cost_order},color_discrete_sequence=px.colors.qualitative.Vivid ,markers=True)
                     fig.update_layout(xaxis={'categoryorder': 'array', 'categoryarray': cost_order})
                     fig.update_traces(hovertemplate="Cost Category: %{x}<br>Average Rating: %{y}")
+
+                    with st.expander("Detailed Explanation of Cost vs. Ratings"):
+                        st.markdown("""
+                        **Description**:
+                        This insight examines the relationship between the cost of dining and delivery ratings for restaurants. The data highlights how different price categories affect customer ratings for dining and delivery experiences.
+
+                        **Interpretation**:
+                        1. **Dining Ratings**:
+                        - **Increasing Trend with Cost**: Dining ratings generally improve as the cost increases, with luxurious restaurants receiving the highest ratings (4.2). This suggests that customers tend to perceive higher-priced restaurants as providing better dining experiences.
+
+                        2. **Delivery Ratings**:
+                        - **Inverse Relationship with Cost**: Delivery ratings peak at budget-friendly (3.3) and affordable (3.2) categories, but significantly decline for higher-priced categories. This is most evident in luxurious restaurants, which have a delivery rating of 0.0, indicating no delivery service.
+
+                        3. **Divergence in Ratings**:
+                        - As prices increase, the gap between dining and delivery ratings becomes more obvious. Semi-expensive and expensive restaurants maintain high dining ratings (4.1) but have lower delivery ratings (2.4 and 1.7, respectively). This indicates a potential gap in service expectations and availability between dining in and ordering out from higher-end restaurants.
+
+                        **Implications**:
+                        - **Service Strategy**: Restaurants, particularly those in higher price categories, might need to evaluate their delivery services. Enhancing delivery quality or offering delivery options could improve customer satisfaction.
+                        - **Customer Expectations**: Customers might associate higher dining costs with better in-house experiences but not necessarily with superior delivery services. Restaurants should manage expectations accordingly.
+                        - **Market Opportunities**: There is an opportunity for budget-friendly and affordable restaurants to capitalize on their relatively high delivery ratings by expanding their delivery operations and enhancing service quality.
+
+                        **Conclusion**:
+                        The analysis of cost versus ratings reveals key patterns in customer perceptions of dining and delivery experiences. While dining ratings improve with increasing costs, delivery ratings tend to decrease, especially in the higher price categories where delivery services are less common or non-existent.
+
+                        **Recommendations**:
+                        - **Enhance Delivery Services**: High-end restaurants should consider investing in improving their delivery services or introducing them if not already available.
+                        - **Focus on Quality**: Budget-friendly and affordable restaurants should continue to focus on the quality of their delivery services to maintain and improve their ratings.
+                        - **Customer Communication**: Clearly communicate the availability and quality of delivery services to manage customer expectations, especially for higher-priced establishments.
+                        """)
+
+
                     st.plotly_chart(fig,use_container_width= True)
                 ind_costvsratings()                
 
@@ -1710,8 +1779,62 @@ if selected == "INSIGHTS" :
                              title='Top {} Popular Cuisine Combinations'.format(top_n),
                              color = 'Frequency',
                               color_continuous_scale= px.colors.sequential.Viridis)
+
+                with st.expander("Detailed Explanation of top 10 Popular Cuisine Combinations"):
+                    st.markdown("""
+                    **Description**:
+                    This insight identifies the top 10 combinations of cuisines offered by restaurants on Zomato, revealing prevalent culinary pairings that customers commonly enjoy together.
+
+                    **Interpretation**:
+                    1. **Consumer Preferences and Pairing Habits**:
+                    - The dominance of **Chinese & North Indian** (7129 restaurants) suggests a blend of diverse tastes, catering to both Indian and Chinese cuisine enthusiasts.
+                    - **Beverages & North Indian** (4569 restaurants) and **Beverages & Desserts** (4425 restaurants) reflect common preferences for accompanying main courses with drinks or sweet endings.
+
+                    2. **Cross-Cultural Dining Trends**:
+                    - Combinations like **Beverages & Chinese** (4255 restaurants) and **Beverages & Fast-food** (4238 restaurants) highlight a global dining trend where beverages are paired with quick-service or international dishes, appealing to a wide audience.
+
+                    3. **Regional and Traditional Influences**:
+                    - **Biryani & North Indian** (3272 restaurants) underscores the popularity of traditional Indian cuisines together, indicating a strong regional preference and culinary tradition.
+
+                    **Implications**:
+                    - **Menu Optimization**: Restaurants can strategically feature these popular combinations to attract and satisfy customer expectations, potentially increasing sales and customer loyalty.
+                    - **Marketing Strategy**: Promoting these combinations can enhance menu visibility and customer engagement, driving interest and foot traffic.
+                    - **Operational Efficiency**: Understanding these preferences can streamline inventory management and operational processes, ensuring consistent availability of popular pairings.
+
+                    **Conclusion**:
+                    Analyzing the top cuisine combinations on Zomato provides valuable insights into consumer dining habits and preferences. By leveraging this data, restaurants can tailor their offerings to better meet customer demand, ultimately enhancing the overall dining experience.
+
+                    **Recommendations**:
+                    - **Promotional Campaigns**: Develop targeted promotions around popular combinations to capitalize on customer preferences.
+                    - **Menu Innovation**: Continuously monitor trends and consider introducing new combinations to keep offerings fresh and appealing.
+                    - **Quality Assurance**: Ensure consistent quality and presentation of popular pairings to maintain customer satisfaction and loyalty.
+                    """)
+
+               
                 st.plotly_chart(fig,use_container_width=True)
 
 
+if selected == "REPORT":
+    # Function to fetch file content from URL
+    def fetch_file_content(url):
+        response = requests.get(url)
+        return response.content
 
+    # URL to the PDF file on GitHub (raw link)
+    pdf_url = "https://github.com/navinds/Zomato-Data-Analysis-and-Visualization/raw/main/Media/fine_dine_report.pdf"
 
+    # Fetch the PDF file from the URL
+    pdf_content = fetch_file_content(pdf_url)
+    reportcol1,reportcol1a,reportcol2 ,reportcol3= st.columns([1,0.5,0.5,1])
+    with reportcol1a:
+        st.image("https://raw.githubusercontent.com/navinds/Zomato-Data-Analysis-and-Visualization/main/Media/1.png",width = 400)
+
+    with reportcol2:
+        # Add a download button for the PDF file
+        st.text("")
+        st.download_button(
+            label="Download PDF",
+            data=pdf_content,
+            file_name="fine_dine_report.pdf",
+            mime="application/pdf",
+        )

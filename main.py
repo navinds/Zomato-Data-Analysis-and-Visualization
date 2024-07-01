@@ -69,7 +69,7 @@ if selected == "HOME":
             st.title("")
             st.title("")
             st.markdown("<h2 style='color:#EF4F5F'>What is Fine Dine?</h2>", unsafe_allow_html=True)
-            st.write(" Fine Dine is an app designed to help people explore and understand the diverse world of Indian cuisine. Using data from Zomato, it offers insights into various aspects of dining experiences, both at the city level and across the entire country. Fine Dine aims to make dining experiences more enjoyable and memorable by providing valuable information and insights to its users.")
+            st.write(" Fine Dine is an app designed to help people explore and understand the diverse world of Indian cuisine. Using data from Zomato, it offers insights into various aspects, both at the city level and across the entire country. Fine Dine aims to make dining experiences more enjoyable and memorable by providing valuable information and insights to its users.")
 
 
         with home_col2:

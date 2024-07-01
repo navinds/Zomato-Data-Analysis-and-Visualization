@@ -114,7 +114,7 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 ## About the Developer
 
-Navin's Pulse Vision is developed by Navin Kumar S, a dedicated tech enthusiast with a passion for the sea of data science and AI. My goal is to become a skilled data scientist.
+Navin's Fine Dine is developed by Navin Kumar S, a dedicated tech enthusiast with a passion for the sea of data science and AI. My goal is to become a skilled data scientist.
 
 Beyond the lines of code, my aim is to innovate and be a part of transformative technological evolution. The world needs solutions that not only solve problems but redefine them. I'm here to create change.
 

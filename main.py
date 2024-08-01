@@ -24,7 +24,7 @@ st.markdown("<div style='text-align:center'><img src='https://raw.githubusercont
 
 selected = option_menu("",
                        options=["HOME", "INSIGHTS","REPORT","ABOUT"],
-                       icons=["info-circle", "house", "bar-chart", "file-text"],
+                       icons=["house", "bar-chart", "file-text", "info-circle"],
                        default_index=0,
                        orientation="horizontal",
                        styles={"container": {"width": "100%","border": "1px ridge #ef4f5f","background-color": "#0E1117"},  # Adjust width to make it smaller
